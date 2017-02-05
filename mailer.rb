@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'pony'
+require 'sinatra/cross_origin'
 
 set :protection, :origin_whitelist => [ENV['white_site']]
 
@@ -21,6 +22,7 @@ get '/' do
 end
 
 post '/' do
+  cross_origin
   email = ""
   params.each do |value|
     email += "#{value[0]}: #{value[1]}\n"

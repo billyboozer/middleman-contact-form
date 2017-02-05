@@ -4,4 +4,4 @@ gem 'sinatra'
 gem 'pony'
 gem 'rack-test'
 gem 'minitest'
-
+gem "sinatra-cross_origin", "~> 0.3.1"
